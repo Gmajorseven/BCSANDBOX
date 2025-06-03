@@ -1,0 +1,28 @@
+{
+  "id": "2f284f5a-1bc6-4be6-a673-9a6802816040",
+  "name": "BCsandbox",
+  "publisher": "Default Publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "15.4.41023.43755",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "showMyCode": true,
+  "runtime": "4.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

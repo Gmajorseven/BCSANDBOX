@@ -1,0 +1,14 @@
+# Ignore AL packages
+.alpackages/*
+
+# Ignore VS Code settings
+.vscode/*
+
+# Ignore temporary files
+*.app
+*.tmp
+*.bak
+
+# Ignore metadata files
+rad.json
+
