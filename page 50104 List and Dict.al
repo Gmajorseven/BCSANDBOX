@@ -47,16 +47,24 @@ page 50104 "List and Dictionary"
                 Caption = 'Dictionary Example';
                 trigger OnAction()
                 var
-                    EmployeeDict: Dictionary of [Code[50], Integer];
+                    EmployeeDict: Dictionary of [Integer, Text[50]];
+                    EmployeeAges: Dictionary of [Integer, Integer];
+                    i: Integer;
+                    name: Text[50];
+                    age: Integer;
                 begin
-                    EmployeeDict.Add('John Doe', 30);
-                    EmployeeDict.Add('Jane Smith', 25);
-                    EmployeeDict.Add('Alice Johnson', 28);
+                    EmployeeDict.Add(1, 'John Doe');
+                    EmployeeDict.Add(2, 'Jane Smith');
+                    EmployeeDict.Add(3, 'Alice Johnson');
+                    EmployeeAges.Add(1, 30);
+                    EmployeeAges.Add(2, 25);
+                    EmployeeAges.Add(3, 28);
 
-                    if EmployeeDict.ContainsKey('Jane Smith') then
-                        Message('Jane Smith is %1 years old.', EmployeeDict.Get('Jane Smith'))
-                    else
-                        Message('Jane Smith not found in the dictionary.');
+                    for i := 1 to EmployeeDict.Count() do begin
+                        name := EmployeeDict.Get(i);
+                        age := EmployeeAges.Get(i);
+                        Message('Employee %1 is %2 years old', name, age);
+                    end;
                 end;
             }
             action(Exit)
