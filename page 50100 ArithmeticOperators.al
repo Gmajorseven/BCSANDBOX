@@ -49,7 +49,7 @@ page 50100 ArithmeticOperators
             {
                 ApplicationArea = All;
                 Caption = 'Subtraction';
-                Image = Subtract;
+                Image = CalculateDepreciation;
 
                 trigger OnAction()
                 begin
@@ -60,7 +60,7 @@ page 50100 ArithmeticOperators
             {
                 ApplicationArea = All;
                 Caption = 'Multiplication';
-                Image = Multiply;
+                Image = Calculate;
 
                 trigger OnAction()
                 begin
@@ -71,7 +71,7 @@ page 50100 ArithmeticOperators
             {
                 ApplicationArea = All;
                 Caption = 'Division';
-                Image = Divide;
+                Image = Calculate;
 
                 trigger OnAction()
                 begin
@@ -85,7 +85,7 @@ page 50100 ArithmeticOperators
             {
                 ApplicationArea = All;
                 Caption = 'Modulus';
-                Image = Modulus;
+                Image = Calculate;
 
                 trigger OnAction()
                 begin
@@ -99,7 +99,7 @@ page 50100 ArithmeticOperators
             {
                 ApplicationArea = All;
                 Caption = 'Reset';
-                Image = Reset;
+                Image = Cancel;
 
                 trigger OnAction()
                 begin
@@ -112,7 +112,7 @@ page 50100 ArithmeticOperators
             {
                 ApplicationArea = All;
                 Caption = 'Exit';
-                Image = Close;
+                Image = CloseDocument;
 
                 trigger OnAction()
                 begin
