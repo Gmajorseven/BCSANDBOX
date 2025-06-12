@@ -25,29 +25,43 @@ page 50105 Condition
                             65 .. 120:
                                 Message('You are a senior citizen.');
                             else
-                                Message('Invalid age entered.');
+                                Error('Invalid age entered.');
                         end;
                     end;
+                }
+                field("Customer No."; customerNo)
+                {
+                    ApplicationArea = All;
+                    TableRelation = Customer."No.";
+                    ToolTip = 'Select a customer.';
                 }
             }
         }
     }
 
-    // actions
-    // {
-    //     area(Processing)
-    //     {
-    //         action(ActionName)
-    //         {
-
-    //             trigger OnAction()
-    //             begin
-
-    //             end;
-    //         }
-    //     }
-    // }
+    actions
+    {
+        area(Processing)
+        {
+            action(ShowCustomer)
+            {
+                ApplicationArea = All;
+                Caption = 'Show Customer';
+                ToolTip = 'Display customer details based on the selected customer number.';
+                trigger OnAction()
+                var
+                    CustomerRecord: Record Customer;
+                begin
+                    if CustomerRecord.Get(customerNo) then begin
+                        Message('Customer: %1', CustomerRecord.Name);
+                    end else
+                        Message('Customer not found.');
+                end;
+            }
+        }
+    }
 
     var
         age: Integer;
+        customerNo: Code[20];
 }
