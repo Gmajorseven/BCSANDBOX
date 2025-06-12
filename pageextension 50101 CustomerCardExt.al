@@ -1,4 +1,4 @@
-pageextension 50107 CustomerCardExt extends "Customer Card"
+pageextension 50101 CustomerCardExt extends "Customer Card"
 {
     layout
     {
@@ -50,15 +50,15 @@ pageextension 50107 CustomerCardExt extends "Customer Card"
                 PromotedCategory = Process;
                 trigger OnAction()
                 begin
-                    count := CustomerRecord.Count();
-                    Message('Total number of customers: %1', count);
+                    intCount := CustomerRecord.Count();
+                    Message('Total number of customers: %1', intCount);
                 end;
             }
         }
     }
     trigger OnOpenPage()
     begin
-        Message('On open page (Before modify), the address is: %1 ', Rec."Address");
+        //Message('On open page (Before modify), the address is: %1 ', Rec."Address");
     end;
 
     trigger OnModifyRecord(): Boolean
@@ -71,5 +71,5 @@ pageextension 50107 CustomerCardExt extends "Customer Card"
         CustomerRecord: Record Customer;
         text001: Label 'Record found: %1';
         text002: Label 'Record not found';
-        count: Integer;
+        intCount: Integer;
 }
