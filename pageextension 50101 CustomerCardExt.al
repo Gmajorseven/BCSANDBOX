@@ -50,8 +50,8 @@ pageextension 50101 CustomerCardExt extends "Customer Card"
                 PromotedCategory = Process;
                 trigger OnAction()
                 begin
-                    intCount := CustomerRecord.Count();
-                    Message('Total number of customers: %1', intCount);
+                    custCount := CustomerRecord.Count();
+                    Message('Total number of customers: %1', custCount);
                 end;
             }
         }
@@ -71,5 +71,5 @@ pageextension 50101 CustomerCardExt extends "Customer Card"
         CustomerRecord: Record Customer;
         text001: Label 'Record found: %1';
         text002: Label 'Record not found';
-        intCount: Integer;
+        custCount: Integer;
 }
