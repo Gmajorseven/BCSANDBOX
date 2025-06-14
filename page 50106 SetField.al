@@ -4,20 +4,29 @@ page 50106 SetField
     ApplicationArea = All;
     UsageCategory = Administration;
 
-    // layout
-    // {
-    //     area(Content)
-    //     {
-    //         group(GroupName)
-    //         {
-    //             field(Name; NameSource)
-    //             {
-
-    //             }
-    //         }
-    //     }
-    // }
-
+    layout
+    {
+        area(Content)
+        {
+            group(GroupName)
+            {
+                field("Yes or No"; YesorNo)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Yes or No';
+                    ToolTip = 'Select Yes or No to set the field value.';
+                    Editable = true; // Allow user to change the value
+                }
+                field("Net Change"; Customer."Net Change")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Net Change';
+                    ToolTip = 'Displays the net change for the customer.';
+                    Editable = false; // This field is calculated and should not be editable
+                }
+            }
+        }
+    }
     actions
     {
         area(Processing)
@@ -64,4 +73,5 @@ page 50106 SetField
 
     var
         Customer: Record Customer;
+        YesorNo: Boolean;
 }
