@@ -31,11 +31,4 @@ query 50100 "Top 5 Customers"
         }
     }
 
-    var
-        myInt: Integer;
-
-    trigger OnBeforeOpen()
-    begin
-
-    end;
 }
